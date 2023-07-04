@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class DiceRoller extends StatefulWidget{
   const DiceRoller({super.key});
@@ -10,12 +11,11 @@ class DiceRoller extends StatefulWidget{
 
 // when using statefull we deal with 2 classes stateful and its state
 class _DiceRollerState extends State<DiceRoller>{
-  var diceImagePath='assets/images/dice-2.png';
+  var diceRoll=2;
   void rollDice() {
     setState(() {
-      diceImagePath='assets/images/dice-5.png';   // without setState no trigger for rerender
+      diceRoll= Random().nextInt(6)+1;   // without setState no trigger for rerender
     });
-    
     // print('changing image');
   }
   @override // to write over main build or createstate or other existing function on
@@ -25,7 +25,7 @@ class _DiceRollerState extends State<DiceRoller>{
               .min, // allow not to take all vertical but just fit to childern hightes
           children: [
             Image.asset(
-              diceImagePath,
+              'assets/images/dice-$diceRoll.png',
               width: 200,
             ),
             const SizedBox(height: 20,), // second method for padding
