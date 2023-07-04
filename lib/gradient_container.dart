@@ -42,11 +42,12 @@ class GradientContainer extends StatelessWidget {
               'assets/images/dice-1.png',
               width: 200,
             ),
+            const SizedBox(height: 20,), // second method for padding
             TextButton(
                 // onPressed: (){}), //anonymous function executable without name
                 onPressed: rollDice,
                 style: TextButton.styleFrom(
-                  padding: const EdgeInsets.only(top: 20),
+                  // padding: const EdgeInsets.only(top: 20),
                   foregroundColor: Colors.white,
                   textStyle: const TextStyle(
                     fontSize: 28,
