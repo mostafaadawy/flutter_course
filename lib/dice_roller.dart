@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+final randomizer = Random();
 class DiceRoller extends StatefulWidget{
   const DiceRoller({super.key});
   @override // to write over main build or createstate or other existing function on the partent
@@ -14,7 +15,7 @@ class _DiceRollerState extends State<DiceRoller>{
   var diceRoll=2;
   void rollDice() {
     setState(() {
-      diceRoll= Random().nextInt(6)+1;   // without setState no trigger for rerender
+      diceRoll= randomizer.nextInt(6)+1;   // without setState no trigger for rerender
     });
     // print('changing image');
   }
