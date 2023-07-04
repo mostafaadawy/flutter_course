@@ -1,23 +1,26 @@
 // nameing convension requires to replace capital by small chars and seperate by _
 import 'package:flutter/material.dart';
 import 'package:flutter_course/styled_text.dart';
+const beginAlignment = Alignment.topLeft;
+const endAlignment = Alignment.bottomRight;
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer(this.color1, this.color2, {super.key});
+  final Color color1;
+  final Color color2;
   @override
   Widget build(context){
       return Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color.fromARGB(255, 26, 2, 80),
-                Color.fromARGB(255, 45, 7, 96),
+                color1, color2,
               ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
+              begin: beginAlignment,
+              end: endAlignment,
             ),
           ),
           child: const Center(
-            child: StyledText(),
+            child: StyledText('Hi Darsh'),
           )
           );
   }
