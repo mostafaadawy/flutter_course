@@ -12,7 +12,10 @@ class DiceRoller extends StatefulWidget{
 class _DiceRollerState extends State<DiceRoller>{
   var diceImagePath='assets/images/dice-2.png';
   void rollDice() {
-    diceImagePath='assets/images/dice-4.png';
+    setState(() {
+      diceImagePath='assets/images/dice-5.png';   // without setState no trigger for rerender
+    });
+    
     // print('changing image');
   }
   @override // to write over main build or createstate or other existing function on
