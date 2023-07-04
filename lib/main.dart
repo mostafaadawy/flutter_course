@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 // ctrl+shif_r refactor to wrap widget
 // alt_shift+f formate the code
+
+// classes are data structure in memory data and functions
 void main() {
   runApp(MaterialApp(
     home: Scaffold(
