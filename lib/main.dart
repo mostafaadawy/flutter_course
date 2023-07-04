@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+//import './gradient_container.dart'; // it works but the next line is also works
+import 'package:flutter_course/gradient_container.dart';
 // ctrl+shif_r refactor to wrap widget
 // alt_shift+f formate the code
 
@@ -12,30 +13,3 @@ void main() {
   ));
 }
 
-class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
-  @override
-  Widget build(context){
-      return Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 26, 2, 80),
-                Color.fromARGB(255, 45, 7, 96),
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-          child: const Center(
-            child: Text(
-              'Darash',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 28,
-              ),
-              ),
-          )
-          );
-  }
-}
