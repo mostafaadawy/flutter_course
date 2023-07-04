@@ -26,8 +26,9 @@ class GradientContainer extends StatelessWidget {
               end: endAlignment,
             ),
           ),
-          child: const Center(
-            child: StyledText('Hi Darsh'),
+          child: Center(
+            // child: StyledText('Hi Darsh'),
+            child: Image.asset('assets/images/dice-1.png',width: 200,),
           )
           );
   }
