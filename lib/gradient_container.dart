@@ -6,7 +6,7 @@ const beginAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
-   GradientContainer(this.color1, this.color2, {super.key});
+  const GradientContainer(this.color1, this.color2, {super.key}); // reason it doesnt work cause the part that needs changes must be in statfull not in stateless class so we will divide this widget stateless and statfull into two parts
 
   // multiple constractur component/class
    GradientContainer.purple({super.key})
@@ -19,6 +19,7 @@ class GradientContainer extends StatelessWidget {
   var diceImagePath='assets/images/dice-2.png';
   void rollDice() {
     diceImagePath='assets/images/dice-4.png';
+    print('changing image');
   }
 
   @override
