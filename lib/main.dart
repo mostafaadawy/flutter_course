@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const MaterialApp(
     home: Scaffold(
+      backgroundColor: Color.fromARGB(255, 149, 89, 217),
       body: Center(child: Text('Darash')),
     ),
   ));
