@@ -6,18 +6,19 @@ const beginAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer(this.color1, this.color2, {super.key});
+   GradientContainer(this.color1, this.color2, {super.key});
 
   // multiple constractur component/class
-  const GradientContainer.purple({super.key})
+   GradientContainer.purple({super.key})
       : color1 = Colors.deepPurple,
         color2 = Colors.indigo;
 
   final Color color1;
   final Color color2;
 
+  var diceImagePath='assets/images/dice-2.png';
   void rollDice() {
-    //.....
+    diceImagePath='assets/images/dice-4.png';
   }
 
   @override
@@ -39,7 +40,7 @@ class GradientContainer extends StatelessWidget {
               .min, // allow not to take all vertical but just fit to childern hightes
           children: [
             Image.asset(
-              'assets/images/dice-1.png',
+              diceImagePath,
               width: 200,
             ),
             const SizedBox(height: 20,), // second method for padding
