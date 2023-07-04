@@ -46,6 +46,7 @@ class GradientContainer extends StatelessWidget {
                 // onPressed: (){}), //anonymous function executable without name
                 onPressed: rollDice,
                 style: TextButton.styleFrom(
+                  padding: const EdgeInsets.only(top: 20),
                   foregroundColor: Colors.white,
                   textStyle: const TextStyle(
                     fontSize: 28,
