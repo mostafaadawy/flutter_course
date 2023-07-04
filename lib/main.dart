@@ -17,7 +17,13 @@ void main() {
             ),
           ),
           child: const Center(
-            child: Text('Darash'),
+            child: Text(
+              'Darash',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 28,
+              ),
+              ),
           )),
     ),
   ));
